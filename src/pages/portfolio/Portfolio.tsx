@@ -1,4 +1,3 @@
-import React from "react";
 import { Avatar } from "../../components/avatar/Avatar";
 import "./portfolio.scss";
 import { Introduce } from "../../components/introduce/Introduce";

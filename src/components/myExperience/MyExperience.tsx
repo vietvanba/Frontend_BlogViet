@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
 import "./myExperience.scss";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const MyExperience = () => {
-  const scrollProgress = useScroll();
   return (
     <div className="myExperience">
       <h1 className="title">My Experiences</h1>
