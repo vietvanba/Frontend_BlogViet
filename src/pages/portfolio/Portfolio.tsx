@@ -5,7 +5,7 @@ import { AboutMe } from "../../components/aboutMe/AboutMe";
 import { MySkill } from "../../components/mySkill/MySkill";
 import { MyExperience } from "../../components/myExperience/MyExperience";
 import { motion } from "framer-motion";
-// import { Email } from "../../components/email/Email";
+import { Email } from "../../components/email/Email";
 export const Portfolio = () => {
   return (
     <div className="portfolio">
@@ -30,9 +30,9 @@ export const Portfolio = () => {
       <div className="myExperience">
         <MyExperience />
       </div>
-      {/* <div className="email" id="contact">
+      <div className="email">
         <Email />
-      </div> */}
+      </div>
     </div>
   );
 };

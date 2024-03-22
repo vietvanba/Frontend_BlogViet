@@ -37,7 +37,6 @@ export const Home = () => {
     ref: HTMLDivElement
   ) => {
     setMousePosition(getRelativeCoordinates(e, ref));
-    console.log(mousePosition);
   };
   return (
     <div
