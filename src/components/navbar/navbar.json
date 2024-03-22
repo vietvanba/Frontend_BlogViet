@@ -1,6 +1,15 @@
 [
   { "name": "Home", "url": "/", "items": [] },
-  { "name": "Blog", "url": "/blog", "items": [] },
+  {
+    "name": "Blog",
+    "url": "/blog",
+    "items": [
+      { "name": "SQL", "url": "/blog/sql", "items": [] },
+      { "name": "Java", "url": "/blog/java", "items": [] },
+      { "name": "Git", "url": "/blog/git", "items": [] },
+      { "name": "Nginx", "url": "/blog/nginx", "items": [] }
+    ]
+  },
   { "name": "About", "url": "/about", "items": [] },
   { "name": "Contact", "url": "/contact", "items": [] },
   { "name": "Portfolio", "url": "/portfolio", "items": [] }

@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     .logo {
+      height: 60px;
+      width: auto;
       &:hover {
         filter: drop-shadow(0 0 2rem $drop-shadow-color);
       }
@@ -37,9 +39,40 @@
       font-weight: normal;
       list-style-type: none;
       position: relative;
-      display: inline-block;
       margin: 0 20px;
       text-decoration: none;
+      .sub {
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+
+        padding: 10px;
+        border-radius: 0px 10px;
+        background-color: $main-text-color;
+        color: black;
+        top: 22px;
+        .subItem {
+          position: relative;
+          width: 100px;
+          gap: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            background-color: $nav-items-bg-color-active;
+            transition: width 0.3s;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      }
       &::before {
         content: "";
         position: absolute;
