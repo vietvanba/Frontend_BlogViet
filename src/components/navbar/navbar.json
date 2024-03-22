@@ -1,0 +1,7 @@
+[
+  { "name": "Home", "url": "/", "items": [] },
+  { "name": "Blog", "url": "/blog", "items": [] },
+  { "name": "About", "url": "/about", "items": [] },
+  { "name": "Contact", "url": "/contact", "items": [] },
+  { "name": "Portfolio", "url": "/portfolio", "items": [] }
+]
