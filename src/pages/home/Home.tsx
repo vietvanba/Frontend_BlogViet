@@ -53,7 +53,7 @@ export const Home = () => {
       </div>
       <div className="coder-image" ref={elementRef}>
         <motion.img
-          src="resource/background.svg"
+          src="background.svg"
           alt="https://www.freepik.com/free-vector/online-games-addiction-concept-illustration_8239225.htm#fromView=search&page=1&position=13&uuid=cc8bbfea-82ae-4f81-8e84-b46e750d9986"
           className="image"
           whileHover={{ scale: 1.03 }}

@@ -13,7 +13,7 @@ export const MyExperience = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0 }}
         >
-          <img src="resource/ptit.png" alt="" className="icon" />
+          <img src="ptit.png" alt="" className="icon" />
           <div className="content">
             <h3>
               University Student -&nbsp;
@@ -39,7 +39,7 @@ export const MyExperience = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0 }}
         >
-          <img src="resource/nashtech.svg" alt="" className="icon" />
+          <img src="nashtech.svg" alt="" className="icon" />
 
           <div className="content">
             <h3>Intern - Java web developer - Nashtech</h3>
@@ -62,7 +62,7 @@ export const MyExperience = () => {
           viewport={{ once: true, amount: 0 }}
         >
           <div>
-            <img src="resource/nashtech.svg" alt="" className="icon" />
+            <img src="nashtech.svg" alt="" className="icon" />
           </div>
 
           <div className="content">

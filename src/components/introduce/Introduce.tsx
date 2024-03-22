@@ -53,7 +53,7 @@ export const Introduce = () => {
                 transition={{ duration: 1 }}
               >
                 <img
-                  src="resource/linkedin.svg"
+                  src="linkedin.svg"
                   alt="linkedin"
                   className="linkedinimg"
                 />
@@ -69,7 +69,7 @@ export const Introduce = () => {
                 transition={{ duration: 1 }}
               >
                 <img
-                  src="resource/github.svg"
+                  src="github.svg"
                   alt="github"
                   className="githubimg"
                 />

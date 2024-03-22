@@ -4,39 +4,39 @@ export const MySkill = () => {
   const mySkillDic = [
     {
       title: "Java",
-      img: "resource/java.png",
+      img: "java.png",
     },
     {
       title: "Git",
-      img: "resource/git.svg",
+      img: "git.svg",
     },
     {
       title: "SQL Server",
-      img: "resource/sqlserver.png",
+      img: "sqlserver.png",
     },
     {
       title: "PostgreSQL",
-      img: "resource/postgresql.svg",
+      img: "postgresql.svg",
     },
     {
       title: "ElasticSearch",
-      img: "resource/elasticsearch.svg",
+      img: "elasticsearch.svg",
     },
     {
       title: "Kafka",
-      img: "resource/kafka.svg",
+      img: "kafka.svg",
     },
     {
       title: "Spring",
-      img: "resource/spring.png",
+      img: "spring.png",
     },
     {
       title: "Neo4j",
-      img: "resource/neo4j.svg",
+      img: "neo4j.svg",
     },
     {
       title: "React",
-      img: "resource/react.png",
+      img: "react.png",
     },
   ];
   return (
