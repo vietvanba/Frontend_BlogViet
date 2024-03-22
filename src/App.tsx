@@ -5,6 +5,7 @@ import "./styles/global.scss";
 import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { motion } from "framer-motion";
+import { Portfolio } from "./pages/portfolio/Portfolio";
 
 function App() {
   const Layout = () => {
@@ -45,6 +46,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/portfolio",
+          element: <Portfolio />,
         },
         {
           path: "*",

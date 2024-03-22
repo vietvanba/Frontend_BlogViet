@@ -44,7 +44,7 @@ export const Home = () => {
       className="home"
       onMouseMove={(e) => handleMouseMove(e, elementRef.current)}
     >
-      <div className="introduce">
+      <div className="welcometext">
         <Typewriter text="I'm a Viet Van Ba" className="title" />
         <Typewriter text="and I'm a Java Engineer" className="title" />
         <Typewriter
@@ -54,7 +54,7 @@ export const Home = () => {
       </div>
       <div className="coder-image" ref={elementRef}>
         <motion.img
-          src="background.svg"
+          src="resource/background.svg"
           alt="https://www.freepik.com/free-vector/online-games-addiction-concept-illustration_8239225.htm#fromView=search&page=1&position=13&uuid=cc8bbfea-82ae-4f81-8e84-b46e750d9986"
           className="image"
           whileHover={{ scale: 1.03 }}
