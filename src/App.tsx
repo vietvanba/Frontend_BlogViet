@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { motion } from "framer-motion";
 import { Portfolio } from "./pages/portfolio/Portfolio";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const Layout = () => {
@@ -35,6 +36,7 @@ function App() {
         >
           <Footer />
         </motion.div>
+        <Toaster position="top-right" />
       </div>
     );
   };
