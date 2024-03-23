@@ -47,19 +47,22 @@ export const Navbar = () => {
           style={isBXOpen ? { display: "flex" } : { display: "none" }}
         >
           {menus.map((menu, index) => (
-            <li className="item" key={index}>
+            <li
+              className="item"
+              key={index}
+              style={
+                (menu.name === "Sign in" || menu.name === "Sign up") &&
+                window.innerWidth > 1024
+                  ? { display: "none", margin: 0 }
+                  : { display: "flex" }
+              }
+            >
               <NavLink
                 onMouseEnter={() => handleMouseEnter(menu.name)}
                 onMouseLeave={() => handleMouseLeave(menu.name)}
                 to={menu.url}
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
-                }
-                style={
-                  (menu.name === "Sign in" || menu.name === "Sign up") &&
-                  window.innerWidth > 1024
-                    ? { display: "none" }
-                    : { display: "flex" }
                 }
                 onClick={handleResize}
               >
