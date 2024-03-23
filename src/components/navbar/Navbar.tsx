@@ -4,6 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+const rootPath = window.location.origin;
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState();
@@ -29,7 +31,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <Link to={"/"} className="homepage">
-        <img src="logo.svg" alt="" className="logo" />
+        <img src={`${rootPath}/logo.svg`} alt="" className="logo" />
         <div className="logo-text">VanBaViet</div>
       </Link>
       <div className="rightnav">
