@@ -42,7 +42,7 @@ export const SignIn = () => {
             <input
               type="text"
               name="username"
-              placeholder="username"
+              placeholder="Username"
               onChange={handleOnChangeInput}
               value={formData.username}
             />
@@ -52,7 +52,7 @@ export const SignIn = () => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               onChange={handleOnChangeInput}
               value={formData.password}
             />
