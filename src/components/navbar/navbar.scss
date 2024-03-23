@@ -2,10 +2,10 @@
 @import "../../styles/responsive.scss";
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 50px 15px;
-  @include md {
+  padding: 50px 50px;
+  @include lg {
     padding: 15px 15px;
   }
   .homepage {
@@ -43,7 +43,7 @@
     .bx-icon {
       display: none;
       cursor: pointer;
-      @include md {
+      @include lg {
         display: block;
       }
     }
@@ -51,8 +51,8 @@
     .items {
       display: flex;
       justify-content: flex-end;
-      width: 60%;
-      @include md {
+      min-width: 100%;
+      @include lg {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -70,13 +70,13 @@
         text-decoration: none;
 
         a {
-          @include md {
+          @include lg {
             display: flex;
             width: 150px;
           }
         }
         z-index: 1;
-        @include md {
+        @include lg {
           background-color: $main-text-color;
           color: black;
           padding: 10px;
@@ -92,7 +92,7 @@
           background-color: $main-text-color;
           color: black;
           top: 22px;
-          @include md {
+          @include lg {
             top: 0;
             right: 140px;
             border-radius: 0px;
@@ -161,8 +161,61 @@
       }
     }
   }
+  .login {
+    display: flex;
+    gap: 10px;
+    @include lg {
+      display: none;
+    }
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-  @include md {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: -3px;
+        left: 0;
+        background-color: $nav-items-bg-color;
+        transition: width 0.3s;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+      .active {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: -3px;
+          left: 0;
+          background-color: $nav-items-bg-color-active;
+          transition: width 0.3s;
+        }
+        &::before {
+          z-index: 1;
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 3px;
+          bottom: -3px;
+          left: 0;
+          background-color: $nav-items-bg-color;
+          transition: width 0.3s;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include lg {
     display: flex;
     justify-content: space-between;
   }

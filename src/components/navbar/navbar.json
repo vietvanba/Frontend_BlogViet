@@ -12,5 +12,15 @@
   },
   { "name": "About", "url": "/about", "items": [] },
   { "name": "Contact", "url": "/contact", "items": [] },
-  { "name": "Portfolio", "url": "/portfolio", "items": [] }
+  {
+    "name": "My note",
+    "url": "/note",
+    "items": [
+      { "name": "Obsidian", "url": "/note/obsidian", "items": [] },
+      { "name": "Others", "url": "/note/others", "items": [] }
+    ]
+  },
+  { "name": "Portfolio", "url": "/portfolio", "items": [] },
+  { "name": "Sign in", "url": "/signin", "items": [] },
+  { "name": "Sign up", "url": "/signup", "items": [] }
 ]

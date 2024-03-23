@@ -9,9 +9,9 @@ const rootPath = window.location.origin;
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState();
-  const [isBXOpen, setIsBXOpen] = useState(false);
+  const [isBXOpen, setIsBXOpen] = useState(true);
   const handleResize = () => {
-    window.innerWidth < 768 ? setIsBXOpen(false) : setIsBXOpen(true);
+    window.innerWidth < 1024 ? setIsBXOpen(false) : setIsBXOpen(true);
   };
   React.useEffect(() => {
     window.addEventListener("resize", handleResize, false);
@@ -34,52 +34,64 @@ export const Navbar = () => {
         <img src={`${rootPath}/logo.svg`} alt="" className="logo" />
         <div className="logo-text">VanBaViet</div>
       </Link>
-      <div className="rightnav">
-        <div className="bx">
-          <FontAwesomeIcon
-            className="bx-icon"
-            icon={faBars}
-            color="antiquewhite"
-            onClick={toggleMenu}
-          />
-          <ul
-            className="items"
-            style={isBXOpen ? { display: "flex" } : { display: "none" }}
-          >
-            {menus.map((menu, index) => (
-              <li className="item" key={index}>
-                <NavLink
+      <div className="bx">
+        <FontAwesomeIcon
+          className="bx-icon"
+          icon={faBars}
+          color="antiquewhite"
+          onClick={toggleMenu}
+        />
+        <ul
+          className="items"
+          style={isBXOpen ? { display: "flex" } : { display: "none" }}
+        >
+          {menus.map((menu, index) => (
+            <li className="item" key={index}>
+              <NavLink
+                onMouseEnter={() => handleMouseEnter(menu.name)}
+                onMouseLeave={() => handleMouseLeave(menu.name)}
+                to={menu.url}
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+                style={
+                  (menu.name === "Sign in" || menu.name === "Sign up") &&
+                  window.innerWidth > 1024
+                    ? { display: "none" }
+                    : { display: "flex" }
+                }
+                onClick={handleResize}
+              >
+                {menu.name}
+              </NavLink>
+              {isOpen && title === menu.name && menu.items.length != 0 && (
+                <div
+                  className="sub"
                   onMouseEnter={() => handleMouseEnter(menu.name)}
                   onMouseLeave={() => handleMouseLeave(menu.name)}
-                  to={menu.url}
-                  className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                  }
-                  onClick={handleResize}
                 >
-                  {menu.name}
-                </NavLink>
-                {isOpen && title === menu.name && menu.items.length != 0 && (
-                  <div
-                    className="sub"
-                    onMouseEnter={() => handleMouseEnter(menu.name)}
-                    onMouseLeave={() => handleMouseLeave(menu.name)}
-                  >
-                    {menu.items.map((subItem, index) => (
-                      <Link
-                        className="subItem"
-                        key={index}
-                        to={subItem.url}
-                        onClick={handleResize}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
+                  {menu.items.map((subItem, index) => (
+                    <Link
+                      className="subItem"
+                      key={index}
+                      to={subItem.url}
+                      onClick={handleResize}
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="login">
+        <div className="item">
+          <NavLink to="/signin">Sign in</NavLink>
+        </div>
+        <div className="item">
+          <NavLink to="/signup">Sign up</NavLink>
         </div>
       </div>
     </div>
