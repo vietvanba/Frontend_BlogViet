@@ -9,7 +9,7 @@
   display: flex;
   @include md {
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
   }
   .welcometext {
     .title {
