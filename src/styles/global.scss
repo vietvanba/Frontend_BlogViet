@@ -45,7 +45,7 @@ a {
 .main {
   min-height: 100vh;
   @include md {
-    min-height: 88vh;
+    min-height: 100vh;
   }
   display: flex;
   flex-direction: column;
