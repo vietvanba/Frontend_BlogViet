@@ -52,10 +52,15 @@
         font-size: 1em;
         border: 0px;
         height: 2em;
+        margin-top: 20px;
         padding: 0 10px;
         border-radius: 9999px;
         cursor: pointer;
+        color: $drop-shadow-color;
         background-color: $main-text-color;
+      }
+      .forgot {
+        text-decoration: underline;
       }
     }
   }

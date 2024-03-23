@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./signIn.scss";
 import { post } from "../../components/axios/API";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 export const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ export const SignIn = () => {
             />
           </label>
           <input type="submit" value="Sign in" className="submit" />
+          <Link to="/forgot" className="forgot">Forgot password?</Link>
         </form>
       </div>
     </div>
