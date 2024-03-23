@@ -49,4 +49,12 @@ a {
   }
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  .nav {
+  }
+  .container {
+    height: 100%;
+  }
+  .footer {
+  }
 }
