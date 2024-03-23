@@ -1,10 +1,10 @@
 @import "../../styles/variables.scss";
 @import "../../styles/responsive.scss";
 .footer {
-  margin-top: auto;
   text-align: center;
   padding: 10px 0;
   transition: 0.3s;
+  color: $main-text-color;
   &:hover {
     filter: drop-shadow(0 0 2.5em $drop-shadow-color);
   }
