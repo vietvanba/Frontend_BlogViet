@@ -7,6 +7,7 @@ import { Footer } from "./components/footer/Footer";
 import { motion } from "framer-motion";
 import { Portfolio } from "./pages/portfolio/Portfolio";
 import { Toaster } from "react-hot-toast";
+import { SignIn } from "./pages/signin/SignIn";
 
 function App() {
   const Layout = () => {
@@ -48,6 +49,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/signin",
+          element: <SignIn />,
         },
         {
           path: "/portfolio",

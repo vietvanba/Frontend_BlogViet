@@ -1,0 +1,59 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 50px;
+  @include md {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .left-form {
+    .enterlogo {
+      width: 150px;
+      @include md {
+        width: 30px;
+      }
+    }
+  }
+  .right-form {
+    .main-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .title {
+        font-weight: 900;
+        text-align: center;
+        font-size: 2.5em;
+      }
+      .input {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        height: 3em;
+        input {
+          border: 0px;
+          height: 2em;
+          padding: 0 10px;
+          border-radius: 9999px;
+          background-color: $main-text-color;
+        }
+      }
+      .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        border: 0px;
+        height: 2em;
+        padding: 0 10px;
+        border-radius: 9999px;
+        cursor: pointer;
+        background-color: $main-text-color;
+      }
+    }
+  }
+}
