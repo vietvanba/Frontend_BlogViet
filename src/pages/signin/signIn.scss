@@ -7,14 +7,20 @@
   justify-content: center;
   align-self: center;
   gap: 50px;
-  @include md {
+  background-color: $button-bg;
+  width: fit-content;
+  padding: 3em 5em;
+  border-radius: 2em;
+  @include lg {
     flex-direction: column;
     gap: 0px;
+    background-color: $button-bg-md;
+    padding: 0;
   }
   .left-form {
     .enterlogo {
       width: 150px;
-      @include md {
+      @include lg {
         width: 30px;
       }
     }
