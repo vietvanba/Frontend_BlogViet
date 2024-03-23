@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -30,75 +31,86 @@
       }
     }
   }
-  .items {
+
+  .bx {
+    position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 60%;
-    .item {
-      font-size: 1em;
-      font-weight: normal;
-      list-style-type: none;
-      position: relative;
-      margin: 0 20px;
-      text-decoration: none;
-      .sub {
-        flex-direction: column;
-        display: flex;
-        position: absolute;
 
-        padding: 10px;
-        border-radius: 0px 10px;
-        background-color: $main-text-color;
-        color: black;
-        top: 22px;
-        .subItem {
-          position: relative;
-          width: 100px;
-          gap: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -3px;
-            left: 0;
-            background-color: $nav-items-bg-color-active;
-            transition: width 0.3s;
-          }
-          &:hover::before {
-            width: 100%;
-          }
-        }
+    .bx-icon {
+      display: none;
+      cursor: pointer;
+      @include md {
+        display: block;
       }
-      &::before {
-        content: "";
+    }
+
+    .items {
+      display: flex;
+      justify-content: flex-end;
+      width: 60%;
+      @include md {
         position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: -3px;
-        left: 0;
-        background-color: $nav-items-bg-color;
-        transition: width 0.3s;
-      }
-      &:hover::before {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        top: 20px;
+        right: 150px;
+        display: none;
       }
-      .active {
-        &::after {
-          content: "";
+      .item {
+        font-size: 1em;
+        font-weight: normal;
+        list-style-type: none;
+        position: relative;
+        margin: 0 20px;
+        text-decoration: none;
+
+        z-index: 1;
+        @include md {
+          background-color: $main-text-color;
+          color: black;
+          padding: 10px;
+          width: 150px;
+        }
+        .sub {
+          flex-direction: column;
+          display: flex;
           position: absolute;
-          width: 100%;
-          height: 3px;
-          bottom: -3px;
-          left: 0;
-          background-color: $nav-items-bg-color-active;
-          transition: width 0.3s;
+          z-index: 2;
+          padding: 10px;
+          border-radius: 0px 10px;
+          background-color: $main-text-color;
+          color: black;
+          top: 22px;
+          @include md {
+            top: 0;
+            right: 140px;
+            border-radius: 0px;
+          }
+          .subItem {
+            position: relative;
+            width: 100px;
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 3px;
+              bottom: -3px;
+              left: 0;
+              background-color: $nav-items-bg-color-active;
+              transition: width 0.3s;
+            }
+            &:hover::before {
+              width: 100%;
+            }
+          }
         }
         &::before {
-          z-index: 1;
           content: "";
           position: absolute;
           width: 0;
@@ -111,10 +123,38 @@
         &:hover::before {
           width: 100%;
         }
+        .active {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            background-color: $nav-items-bg-color-active;
+            transition: width 0.3s;
+          }
+          &::before {
+            z-index: 1;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            background-color: $nav-items-bg-color;
+            transition: width 0.3s;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+        }
       }
     }
   }
-  .bx {
-    display: none;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
   }
 }
