@@ -9,11 +9,12 @@ const rootPath = window.location.origin;
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState();
-  const [isBXOpen, setIsBXOpen] = useState(true);
+  const [isBXOpen, setIsBXOpen] = useState(false);
   const handleResize = () => {
     window.innerWidth < 1024 ? setIsBXOpen(false) : setIsBXOpen(true);
   };
   React.useEffect(() => {
+    window.innerWidth < 1024 ? setIsBXOpen(false) : setIsBXOpen(true);
     window.addEventListener("resize", handleResize, false);
   }, []);
   const toggleMenu = () => {
