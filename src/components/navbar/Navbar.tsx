@@ -31,7 +31,7 @@ export const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <Link to={"/"} className="homepage">
+      <Link to={"/"} className="homepage" onClick={handleResize}>
         <img src={`${rootPath}/logo.svg`} alt="" className="logo" />
         <div className="logo-text">VanBaViet</div>
       </Link>
